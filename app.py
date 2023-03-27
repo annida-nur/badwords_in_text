@@ -112,6 +112,7 @@ else :
             
             sentences = []
             for line in upload_file:
+                line = line.decode()
                 sentences.append(line)
             text = ' '.join(map(str, sentences))
             st.subheader("Text of The File 📜")
