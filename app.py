@@ -51,7 +51,7 @@ st.sidebar.image(
 )
 st.sidebar.title("Hi there, Welcome 👋")
 st.sidebar.caption("""
-            Want to know if a sentence or text file has lyrics that contain bad words quickly? Let's find out here!
+            Want to know if a sentence or text file contains bad words quickly? Let's find out here!
             We will help you with pleasure. Hope you guys enjoy your time here 😄
             """)
 page = st.sidebar.selectbox("Menu",("Badwords in Sentences","Badwords in Text File"))
