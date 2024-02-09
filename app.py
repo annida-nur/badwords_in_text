@@ -7,7 +7,7 @@ import numpy as np
 import PyPDF2
 ##########################################################################
 import pathlib
-from bs4 import BeautifulSoup4
+from bs4 import BeautifulSoup
 import logging
 import shutill
 def inject_ga():
