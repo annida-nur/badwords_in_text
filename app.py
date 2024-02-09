@@ -15,7 +15,7 @@ import logging
 import shutil
 
 def inject_ga():
-    GA_ID = "google_analytics"
+    GA_ID = "G-3XHJ5EL5Q5"
     GA_JS = """
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XHJ5EL5Q5"></script>
