@@ -47,12 +47,12 @@ def find_bad_words(review,finded,bad_words):
 st.markdown(
     """
         <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-**********"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XHJ5EL5Q5"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-**********');
+            gtag('config', 'G-3XHJ5EL5Q5');
         </script>
     """, unsafe_allow_html=True)
 
