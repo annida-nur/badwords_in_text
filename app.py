@@ -51,7 +51,8 @@ def inject_ga():
         index_path.write_text(new_html)
 
 
-inject_ga()##########################################################################
+inject_ga()
+##########################################################################
 #function
 def clean(text):
     text = re.sub('[^a-zA-Z]+', ' ', text)
