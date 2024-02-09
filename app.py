@@ -6,17 +6,14 @@ import re
 import numpy as np
 import PyPDF2
 ##########################################################################
-st.markdown(
-    """
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-9107NMMV33"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-9107NMMV33');
-        </script>
-    """, unsafe_allow_html=True)
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9107NMMV33"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9107NMMV33');
+    </script>
 #function
 def clean(text):
     text = re.sub('[^a-zA-Z]+', ' ', text)
