@@ -4,8 +4,37 @@ import streamlit as st
 import pandas as pd
 import re
 import numpy as np
-import PyPDF2
-import streamlit.components.v1 as components
+##########################################################################
+import pathlib
+from bs4 import BeautifulSoup
+import logging
+import shutill
+def inject_ga():
+    GA_ID = "G-3XHJ5EL5Q5"
+    GA_JS = """
+    <script async src = "https://www.googletagmanager.com/gtag/js?=id=G-3XHJ5EL5Q5"></script>
+    <script>
+        window.datalayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config','G-3XHJ5EL5Q5');
+    </script>
+    """
+
+    index_path = pathlib.Path(st.__file__).parent / "static" / "index.html"
+    soup = BeautifulSoup(index_path.read_text(), features="html.parser")
+    if not soup.find(id=GA_ID):
+        bck_index = index_path.with_suffix('.bck')
+        if bck_index.exists():
+            shutill.copy(bcl_index, index_path)
+        else:
+            shutill.copy(index_path, bck_index)
+        html = str(soup)
+        new_html = html.replace('<head>','<head>\n' + GA_JS)
+        index_path.write_text(new_html)
+
+inject_ga()
+    
 ##########################################################################
 #function
 def clean(text):
@@ -45,11 +74,6 @@ def find_bad_words(review,finded,bad_words):
 
 ##########################################################################
 # sidebar
-# Include Google Analytics tracking code
-with open("google_analytics.html", "r") as f:
-    html_code = f.read()
-    components.html(html_code, height=0)
-    
 st.sidebar.image(
     "https://www.indiewire.com/wp-content/uploads/2014/03/bad-words.jpg?w=680",
     width = 300
