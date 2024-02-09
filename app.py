@@ -30,7 +30,7 @@ def inject_ga():
     if not soup.find(id=GA_ID):
         bck_index = index_path.with_suffix('.bck')
         if bck_index.exists():
-            shutil.copy(bcl_index, index_path)
+            shutil.copy(bck_index, index_path)
         else:
             shutil.copy(index_path, bck_index)
         html = str(soup)
