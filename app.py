@@ -129,17 +129,3 @@ else :
                 st.subheader("The File  contains any badwords ❗❗❗❗")
                 st.subheader("Check what we have found 👇👇")
                 st.dataframe(df)
-
-components.html(
-    """
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XHJ5EL5Q5"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-3XHJ5EL5Q5');
-    </script>
-    """
-)
