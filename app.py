@@ -19,33 +19,17 @@ import pathlib
 import shutil
 import streamlit as st
 
-def inject_ga():
-    GA_ID = "google_analytics"
-
-    # Note: Please replace the id from G-XXXXXXXXXX to whatever your
-    # web application's id is. You will find this in your Google Analytics account
-    
-    GA_JS = """
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XHJ5EL5Q5"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-3XHJ5EL5Q5');
-    </script>
+st.markdown(
     """
-
-    # Insert the script in the head tag of the static template inside your virtual
-    index_path = pathlib.Path(st.__file__).parent / "static" / "index.html"
-    logging.info(f'editing {index_path}')
-    soup = BeautifulSoup(index_path.read_text(), features="html.parser")
-    html = str(soup)
-    new_html = html.replace('<head>', '<head>\n' + GA_JS)
-    index_path.write_text(new_html)
-
-
-inject_ga()
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3XHJ5EL5Q5"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3XHJ5EL5Q5');
+        </script>
+    """, unsafe_allow_html=True)
 ##########################################################################
 #function
 def clean(text):
