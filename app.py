@@ -7,7 +7,6 @@ import re
 import numpy as np
 import PyPDF2
 ##########################################################################
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-9107NMMV33"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
