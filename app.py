@@ -1,3 +1,15 @@
+##########################################################################
+#libraries & packages
+import streamlit as st
+import pandas as pd
+import re
+import numpy as np
+import PyPDF2
+import pathlib
+from bs4 import BeautifulSoup
+import logging
+import shutil
+##########################################################################
 GA_ID = "google_analytics"
 GA_SCRIPT = """
 <!-- Google tag (gtag.js) -->
@@ -27,14 +39,6 @@ def inject_ga():
 
 inject_ga()
 
-##########################################################################
-#libraries & packages
-import streamlit as st
-import pandas as pd
-import re
-import numpy as np
-import PyPDF2
-##########################################################################
 #function
 def clean(text):
     text = re.sub('[^a-zA-Z]+', ' ', text)
