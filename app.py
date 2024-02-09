@@ -44,6 +44,18 @@ def find_bad_words(review,finded,bad_words):
 
 ##########################################################################
 # sidebar
+st.markdown(
+    """
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-**********"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-**********');
+        </script>
+    """, unsafe_allow_html=True)
+
 st.sidebar.image(
     "https://www.indiewire.com/wp-content/uploads/2014/03/bad-words.jpg?w=680",
     width = 300
