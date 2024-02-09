@@ -10,7 +10,7 @@ import pathlib
 try:
     from bs4 import BeautifulSoup
 except :
-    from beautifulSoup4 import BeautifulSoup 
+    from BeautifulSoup import BeautifulSoup 
 import logging
 import shutill
 def inject_ga():
