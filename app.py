@@ -8,7 +8,7 @@ import PyPDF2
 ##########################################################################
 st.markdown(
     """
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <!-- Google tag (gtag.js) -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-9107NMMV33"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
