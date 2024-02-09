@@ -4,9 +4,10 @@ import streamlit as st
 import pandas as pd
 import re
 import numpy as np
+import PyPDF2
 ##########################################################################
 import pathlib
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup4
 import logging
 import shutill
 def inject_ga():
