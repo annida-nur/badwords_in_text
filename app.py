@@ -12,7 +12,7 @@ try:
 except :
     from BeautifulSoup import BeautifulSoup 
 import logging
-import shutill
+import shutil
 def inject_ga():
     GA_ID = "G-3XHJ5EL5Q5"
     GA_JS = """
