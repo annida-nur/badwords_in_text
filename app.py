@@ -6,11 +6,6 @@ import re
 import numpy as np
 import PyPDF2
 import streamlit.components.v1 as components
-
-# Include Google Analytics tracking code
-with open("google_analytics.html", "r") as f:
-    html_code = f.read()
-    components.html(html_code, height=0)
 ##########################################################################
 #function
 def clean(text):
@@ -50,6 +45,11 @@ def find_bad_words(review,finded,bad_words):
 
 ##########################################################################
 # sidebar
+# Include Google Analytics tracking code
+with open("google_analytics.html", "r") as f:
+    html_code = f.read()
+    components.html(html_code, height=0)
+    
 st.sidebar.image(
     "https://www.indiewire.com/wp-content/uploads/2014/03/bad-words.jpg?w=680",
     width = 300
