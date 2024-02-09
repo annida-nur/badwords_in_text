@@ -1,4 +1,4 @@
-beautifulsoup4==4.12.2
+beautifulsoup==4.12.2
 numpy==1.24.2
 pandas==1.5.3
 PyPDF2==3.0.1
